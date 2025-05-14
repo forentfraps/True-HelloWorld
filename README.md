@@ -52,10 +52,10 @@
 If you prefer manual steps:
 
 ```bat
-nasm -f win64 peb.asm -o peb.obj
-nasm -f win64 pe.asm -o pe.obj
-nasm -f win64 string_cmp.asm -o string_cmp.obj
-nasm -f win64 main.asm -o main.obj
+nasm -f win64 peb.asm -o peb.o
+nasm -f win64 pe.asm -o pe.o
+nasm -f win64 string_cmp.asm -o string_cmp.o
+nasm -f win64 main.asm -o main.o
 
 
 gcc peb.o pe.o main.o string_cmp.o -nostdlib -ffreestanding -fno-builtin -Wl,-e,_start -static -s -o HelloWorld.exe
